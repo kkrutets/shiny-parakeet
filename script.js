@@ -14,8 +14,8 @@ const state = {
 
 // ===== ИНИЦИАЛИЗАЦИЯ =====
 document.addEventListener('DOMContentLoaded', () => {
-    initializeStepsGrid();
     loadFromLocalStorage();
+    initializeStepsGrid();
     updateProgressBar();
     setupEventListeners();
     setupDebugMenu();
