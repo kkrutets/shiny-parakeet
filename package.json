@@ -1,0 +1,66 @@
+{
+  "name": "driver-license-tracker",
+  "version": "1.0.0",
+  "description": "Интерактивный трекер прогресса подготовки к экзамену на водительские права, специально разработанный для людей с СДВГ",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "start-windows": "python -m http.server 8000"
+  },
+  "keywords": [
+    "driver-license",
+    "exam-tracker",
+    "progress-tracker",
+    "ADHD-friendly",
+    "motivation",
+    "gamification"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/driver-license-tracker"
+  },
+  "technologies": {
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript (ES6+)"
+    ],
+    "features": [
+      "Web Audio API для синтеза звуков",
+      "localStorage для сохранения данных",
+      "CSS Grid и Flexbox для адаптивного дизайна",
+      "CSS анимации и переходы"
+    ]
+  },
+  "project-structure": {
+    "index.html": "Основная разметка приложения",
+    "styles.css": "Стили и анимации",
+    "script.js": "Основная логика приложения",
+    "config.js": "Конфигурация и утилиты",
+    "debug.js": "Отладочные функции",
+    "README.md": "Полная документация",
+    "QUICKSTART.md": "Быстрый старт"
+  },
+  "features": {
+    "daily-tasks": "Три урока + решение билетов в день",
+    "global-map": "Визуальная карта из 88 шагов",
+    "progress-bar": "Главный прогресс-бар на верху",
+    "dopamine-mechanics": "Анимации, звуки, вибрация, конфетти",
+    "rescue-button": "Кнопка спасения с 5-минутным таймером",
+    "lofi-player": "Встроенный плеер для концентрации",
+    "pomodoro-timer": "Таймер 20/10 минут",
+    "data-persistence": "Автоматическое сохранение в localStorage",
+    "no-penalties": "Нет штрафов за пропуски дней",
+    "responsive-design": "Работает на всех устройствах"
+  },
+  "configuration": {
+    "exam-date": "15 сентября 2026",
+    "total-steps": 88,
+    "lessons-per-day": 3,
+    "pomodoro-work": "20 минут",
+    "pomodoro-break": "10 минут",
+    "rescue-timer": "5 минут"
+  }
+}

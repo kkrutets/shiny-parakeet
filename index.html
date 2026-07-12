@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПРОЕКТ: ВОДИТЕЛЬСКИЕ ПРАВА</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Скрытое меню для отладки -->
+    <div class="debug-menu" id="debugMenu">
+        <button class="debug-toggle" id="debugToggle">⚙️</button>
+        <div class="debug-panel" id="debugPanel" style="display: none;">
+            <h3>Отладка</h3>
+            <button onclick="UTILS.exportData()">📥 Экспортировать данные</button>
+            <button onclick="document.getElementById('importFile').click()">📤 Импортировать данные</button>
+            <input type="file" id="importFile" accept=".json" style="display: none;" onchange="handleFileImport(event)">
+            <button onclick="showStatistics()">📊 Статистика</button>
+            <button onclick="UTILS.clearAllData()">🗑️ Очистить все данные</button>
+        </div>
+    </div>
+    <div class="container">
+        <!-- ШАПКА -->
+        <header class="header">
+            <h1 class="main-title">🚗 ПРОЕКТ: ВОДИТЕЛЬСКИЕ ПРАВА 💨</h1>
+            
+            <!-- Главный прогресс-бар -->
+            <div class="progress-section">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="mainProgressBar"></div>
+                </div>
+                <p class="progress-text" id="progressText">0% завершено</p>
+            </div>
+
+            <!-- Дружелюбный дедлайн -->
+            <div class="deadline-section">
+                <p class="deadline-text" id="deadlineText">До экзамена примерно 34 дня. Мы в графике! 🎯</p>
+            </div>
+        </header>
+
+        <!-- БЛОК "ЗАДАЧА НА СЕГОДНЯ" -->
+        <section class="today-tasks">
+            <h2 class="section-title">📋 ЗАДАЧА НА СЕГОДНЯ</h2>
+            
+            <div class="lessons-grid">
+                <div class="lesson-checkbox" data-lesson="1">
+                    <div class="checkbox-box">⬜</div>
+                    <p>Урок 1</p>
+                </div>
+                <div class="lesson-checkbox" data-lesson="2">
+                    <div class="checkbox-box">⬜</div>
+                    <p>Урок 2</p>
+                </div>
+                <div class="lesson-checkbox" data-lesson="3">
+                    <div class="checkbox-box">⬜</div>
+                    <p>Урок 3</p>
+                </div>
+            </div>
+
+            <div class="tickets-checkbox">
+                <div class="checkbox-box small">⬜</div>
+                <p>Решить билеты по этим темам</p>
+            </div>
+
+            <!-- Конфетти контейнер -->
+            <div id="confetti-container"></div>
+        </section>
+
+        <!-- БЛОК "ГЛОБАЛЬНАЯ КАРТА: 88 ШАГОВ" -->
+        <section class="global-map">
+            <h2 class="section-title">🗺️ ГЛОБАЛЬНАЯ КАРТА: 88 ШАГОВ</h2>
+            <div class="steps-grid" id="stepsGrid"></div>
+            <p class="map-info">Серые кружочки — впереди, яркие — уже пройдены! Нет спешки, нет штрафов. 💪</p>
+        </section>
+
+        <!-- БЛОК "КНОПКА СПАСЕНИЯ" -->
+        <section class="rescue-button-section">
+            <button class="rescue-button" id="rescueButton">🆘 Не могу начать</button>
+        </section>
+
+        <!-- ПОДВАЛ: Инструменты для фокуса -->
+        <footer class="footer">
+            <div class="tools-panel">
+                <div class="tool-item">
+                    <button class="tool-button" id="lofiButton">🎵 Lo-Fi Плеер</button>
+                    <div class="lofi-player" id="lofiPlayer" style="display: none;">
+                        <audio id="lofiAudio" controls>
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="tool-item">
+                    <button class="tool-button" id="pomodoroButton">🍅 Помодоро (20/10)</button>
+                    <div class="pomodoro-timer" id="pomodoroTimer" style="display: none;">
+                        <div class="timer-display" id="timerDisplay">20:00</div>
+                        <div class="timer-controls">
+                            <button class="timer-btn" id="startTimer">Старт</button>
+                            <button class="timer-btn" id="resetTimer">Сброс</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО "СПАСЕНИЯ" -->
+    <div class="modal" id="rescueModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2>Просто включи видео на х1.5 и посмотри 5 минут</h2>
+            <p>Если через 5 минут захочешь закрыть — закрой. Я разрешаю. 💚</p>
+            
+            <div class="rescue-timer">
+                <div class="timer-display" id="rescueTimerDisplay">5:00</div>
+                <button class="start-button" id="startRescueTimer">Нажимай старт!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="debug.js"></script>
+    <script src="adhd-features.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
